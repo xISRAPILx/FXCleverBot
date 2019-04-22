@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.*?>
+<AnchorPane prefHeight="600.0" prefWidth="500" stylesheets="@style/style.css"
+            xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ru.fxcleverbot.view.MainSceneController">
+    <TextField disable="true" fx:id="messageTextField" layoutX="14.0" layoutY="548.0"
+               onKeyReleased="#onMessageTextFieldKeyReleased"
+               prefHeight="38.0" prefWidth="395.0" promptText="Type your message..." AnchorPane.bottomAnchor="14.0"
+               AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="91.0"/>
+    <Button disable="true" fx:id="sendButton" layoutX="409.0" layoutY="548.0" mnemonicParsing="false"
+            onAction="#onSendButtonPressed"
+            prefHeight="38.0" prefWidth="75.0" text="Send" AnchorPane.bottomAnchor="14.0"
+            AnchorPane.rightAnchor="16.0"/>
+    <ScrollPane fx:id="scrollPane" cacheShape="false" centerShape="false" prefHeight="540.0" prefWidth="500.0"
+                scaleShape="false" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0"
+                AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <AnchorPane minHeight="0.0" minWidth="0.0">
+            <VBox fx:id="messages" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                  AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            </VBox>
+        </AnchorPane>
+    </ScrollPane>
+    <ProgressIndicator fx:id="loadingProgressIndicator" layoutX="220.0" layoutY="270.0" prefHeight="60.0"
+                       prefWidth="60.0" AnchorPane.bottomAnchor="270.0" AnchorPane.leftAnchor="220.0"
+                       AnchorPane.rightAnchor="220.0" AnchorPane.topAnchor="270.0"/>
+</AnchorPane>

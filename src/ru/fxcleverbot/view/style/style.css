@@ -1,0 +1,14 @@
+.text-field{
+    -fx-background-radius: 10 0 0 10;
+}
+
+.button{
+    -fx-background-radius: 0 50 50 0;
+}
+
+.scroll-pane{
+    -fx-background-color: transparent;
+
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
